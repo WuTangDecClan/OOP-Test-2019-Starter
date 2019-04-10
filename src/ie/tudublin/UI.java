@@ -10,6 +10,7 @@ public class UI extends PApplet
 
 {	public void separate(int value)
 	{
+
 		int hundreds = (value / 100);
 		int tens = (value - (hundreds * 100)) / 10;
 		int ones = value - ((hundreds * 100)  + (tens * 10));
@@ -45,6 +46,11 @@ public class UI extends PApplet
             System.out.println(colour);
         }
     }
+	//method that returns the colour object associated with the value parameter.
+	//public Colour findColour(int value) {
+		
+		//return colours;
+	//}
 
 
 	public void draw()
@@ -53,7 +59,8 @@ public class UI extends PApplet
 	}
 	//Declaring an ArrayList called colours that can hold instances of the Colour class.
 	private ArrayList<Colour> colours = new ArrayList<Colour>();
-
+	//Declaring an ArrayList called resistors to hold instances of the Resistor class.
+	private ArrayList<Resistor> resistors = new ArrayList<Resistor>();
 
 
 
