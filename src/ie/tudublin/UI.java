@@ -30,13 +30,19 @@ public class UI extends PApplet
 	public void setup() 
 	{
 	}
-	
+	//Load Colours method populates the ArrayList from the rows in the colours.csv.
 	public void loadColours() {
         Table table = loadTable("colours.csv", "header");
 
         for (TableRow row : table.rows()) {
             Colour colour = new Colour(row);
             colours.add(colour);
+        }
+	}
+	//printColours method prints the contents of the colours ArrayList to the console.
+	public void printColours() {
+        for (Colour colour : colours) {
+            System.out.println(colour);
         }
     }
 
